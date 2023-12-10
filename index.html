@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch Bulb</title>
+    <style>
+        .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            
+          }
+        .btn {
+            background-color: #4c6daf; /* Green */
+            color: azure;
+            border-radius: 15%;
+        } 
+          
+    </style>
+</head>
+<body >
+    <img id="bulb" src="./turn_off.png" alt="" class="center">
+     <button id ="Btn" class="center btn">Turn On</button>
+     <script >
+        
+        let btn=document.getElementById('Btn') 
+        let bulb=document.getElementById('bulb')
+        console.log(bulb.src)
+        btn.addEventListener('click', change)
+       
+        function change(){
+            if(bulb.src.includes('off')){
+               bulb.src="./turn_on.png" 
+               btn.textContent="Turn Off" }
+            else{
+                bulb.src="./turn_off.png"
+                btn.textContent="Turn On"
+            }
+           
+         }
+     </script>
+</body>
+</html>
